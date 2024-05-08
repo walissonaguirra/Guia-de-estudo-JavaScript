@@ -24,3 +24,50 @@ console.log('Sua idade é ' + (idade || 'Não informado'))
 idade = 0 // undefined, null
 console.log('Sua idade é ' + (idade ?? 'Não informado'))
 // R= Sua idade é 0
+
+
+/**
+ * Object
+ * 
+ * O conceito de objetos em JavaScript pode ser entendido com objetos 
+ * tangíveis da vida real. São basicamente estrutura de dados que 
+ * podem armasena conjuntos de chave e valor.
+ * 
+ */
+
+let usuario = {
+  nome: 'Walisson Aguirra',
+  idade: 24,
+  endereco: {
+    rua: 'Rua teste',
+    numero: 123,
+  },
+}
+
+console.log(usuario)
+
+// Metodos para manipular Objetos
+
+// in => verifica se existe uma "chave" em um objeto
+console.log('nome' in usuario) // true
+console.log('sobrenome' in usuario) // false
+
+// Object.keys() => retorna um vetor com toda as chaves do objeto
+console.log(Object.keys(usuario)) // ['nome', 'idade', 'endereco']
+
+// Object.values() => retorna um vetor com todos os valores do objeto
+console.log(Object.values(usuario)) // ['Walisson Aguirra', 24, {...}]
+
+/** 
+ * Object.entries() => retorna um vetor de vetores
+ * 
+ * [
+ *  [
+ *    "nome", // O primeiro indice contem o equivalente a chave
+ *    "Walisson Aguirra" O segundo indice contem o equivalente a o valor
+ *  ],
+ *  ...
+ * ]
+ */
+console.log(Object.entries(usuario)) // [["nome", "Walisson Aguirra"], ...]
+
