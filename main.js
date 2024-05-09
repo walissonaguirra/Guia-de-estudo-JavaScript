@@ -107,3 +107,27 @@ console.log(primeiro, segundo, restante) // 1, 2, [3, 4, 5, 6, 7, 8, 9, 10]
 
 let [_primeiro, , terceiro, ..._restante] = array // Pulando o segundo item
 console.log(_primeiro, terceiro, _restante) // 1, 3, [4, 5, 6, 7, 8, 9, 10]
+
+
+/**
+ * Short Syntax
+ */
+
+let ___nome = "Walisson Aguirra"
+let ___idade = 24
+
+let _usuario = {
+  ___nome: ___nome,
+  ___idade: ___idade
+}
+
+console.log(_usuario) // {___nome: 'Walisson Aguirra', ___idade: 24}
+
+// Ficaria
+
+let __usuario = {
+  ___nome,
+  ___idade
+}
+
+console.log(__usuario) // {___nome: 'Walisson Aguirra', ___idade: 24}
