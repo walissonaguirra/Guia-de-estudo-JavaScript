@@ -92,3 +92,18 @@ console.log(name, age) // name == 'Walisson Aguirra', age == 24
 
 let { nome: _name, idade: _age, nickname = 'aguirra24' } = usuario 
 console.log(nickname) // nickname === 'aguirra24'
+
+
+/**
+ * Rest operator
+ */
+
+let { nome, ...rest } = usuario
+console.log(nome, rest) // Walisson Aguirra, {idade: 24, endereco: {...}}
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let [primeiro, segundo, ...restante] = array
+console.log(primeiro, segundo, restante) // 1, 2, [3, 4, 5, 6, 7, 8, 9, 10]
+
+let [_primeiro, , terceiro, ..._restante] = array // Pulando o segundo item
+console.log(_primeiro, terceiro, _restante) // 1, 3, [4, 5, 6, 7, 8, 9, 10]
