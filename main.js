@@ -149,3 +149,23 @@ let ___usuario = {
 }
 console.log(___usuario.endereco?.cep) // undefined
 console.log(___usuario.endereco?.enderecoCompleto?.()) // Rua teste - 123
+
+/**
+ * Métodos de array
+ */
+
+let _array = [1, 2, 3, 4, 5]
+
+_array.forEach(item => {
+  console.log(item) //  1 2 3 4 5
+})
+
+let novoArray = _array.map(item => {
+  if (item % 2 == 0) {
+    return item * 10;
+  }
+
+  return item
+})
+
+console.log(novoArray) // [1, 20, 3, 40, 5]
