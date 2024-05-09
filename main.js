@@ -78,17 +78,17 @@ console.log(Object.entries(usuario)) // [["nome", "Walisson Aguirra"], ...]
  * 
  */
 
-let nome = usuario.nome // nome == 'Walisson Aguirra'
-let idade = usuario.idade // idade == 24
-console.log(nome, idade)
+let _nome = usuario.nome // nome == 'Walisson Aguirra'
+let _idade = usuario.idade // idade == 24
+console.log(_nome, _idade)
 
 // Usando desestruturação ficaria:
 
-let { nome, idade } = usuario 
-console.log(nome, idade) // nome == 'Walisson Aguirra', idade == 24
+let { __nome, __idade } = usuario 
+console.log(__nome, __idade) // nome == 'Walisson Aguirra', idade == 24
 
 let { nome: name, idade: age } = usuario
 console.log(name, age) // name == 'Walisson Aguirra', age == 24
 
-let { nome: name, idade: age, nickname = 'aguirra24' } = usuario 
+let { nome: _name, idade: _age, nickname = 'aguirra24' } = usuario 
 console.log(nickname) // nickname === 'aguirra24'
