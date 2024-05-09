@@ -131,3 +131,21 @@ let __usuario = {
 }
 
 console.log(__usuario) // {___nome: 'Walisson Aguirra', ___idade: 24}
+
+/**
+ * Optional Chaining
+ */
+
+let ___usuario = {
+  nome: 'Walisson Aguirra',
+  idade: 24,
+  endereco: {
+    rua: 'Rua teste',
+    numero: 123,
+    enderecoCompleto() {
+      return this.rua + ' - ' + this.numero;
+    },
+  },
+}
+console.log(___usuario.endereco?.cep) // undefined
+console.log(___usuario.endereco?.enderecoCompleto?.()) // Rua teste - 123
