@@ -198,3 +198,11 @@ let soma = _array.reduce((acc, item) => {
   return acc + item
 }, 0)
 console.log(soma) // 15
+
+/**
+ * Template Literals
+ */
+
+let _name = null
+let message = `Bem-vindo, ${name ? name : 'visitante'}`
+console.log(message) // Bem-vindo, visitante
