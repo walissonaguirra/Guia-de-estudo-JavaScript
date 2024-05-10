@@ -156,6 +156,10 @@ console.log(___usuario.endereco?.enderecoCompleto?.()) // Rua teste - 123
 
 let _array = [1, 2, 3, 4, 5]
 
+for (let item of _array) {
+  console.log(item) //  1 2 3 4 5
+}
+
 _array.forEach(item => {
   console.log(item) //  1 2 3 4 5
 })
@@ -167,5 +171,30 @@ let novoArray = _array.map(item => {
 
   return item
 })
-
 console.log(novoArray) // [1, 20, 3, 40, 5]
+
+let _novoArray = _array.filter(item => item % 2 === 0) 
+console.log(_novoArray) // 2, 4
+
+let __novoArray = _array
+  .filter(item => item % 2 === 0)
+  .map(item => item * 10)
+console.log(__novoArray) // 20, 40
+
+let todosItensSaoNumeros = _array.every(item => typeof item === 'number')
+console.log(todosItensSaoNumeros) // true
+
+let peloMenosUmItemNaoEUmNumero = _array
+  .some(item => typeof item === 'number')
+console.log(peloMenosUmItemNaoEUmNumero) // false
+
+let par = _array.find(item => item % 2 === 0)
+console.log(par) // 2
+
+let index = _array.findIndex(item => item % 2 === 0)
+console.log(index) // 1
+
+let soma = _array.reduce((acc, item) => {
+  return acc + item
+}, 0)
+console.log(soma) // 15
