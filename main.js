@@ -90,7 +90,7 @@ console.log(__nome, __idade) // nome == 'Walisson Aguirra', idade == 24
 let { nome: name, idade: age } = usuario
 console.log(name, age) // name == 'Walisson Aguirra', age == 24
 
-let { nome: _name, idade: _age, nickname = 'aguirra24' } = usuario 
+let { nome: __name, idade: _age, nickname = 'aguirra24' } = usuario 
 console.log(nickname) // nickname === 'aguirra24'
 
 
