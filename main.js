@@ -244,3 +244,18 @@ async function buscaDadosNoGithub() {
 }
 
 buscaDadosNoGithub()
+
+/**
+ * ES Modules
+ */
+
+import { sub, PI } from './lib/math'
+import sum from './lib/soma'
+import * as math from './lib/math'
+
+console.log('ES Modules: ' + sum(1, 2))
+console.log('ES Modules: ' + sub(5, 1))
+console.log('ES Modules: ' + PI)
+
+console.log('ES Modules: ' + math.PI)
+console.log('ES Modules: ' + math.sub(50, 1))
