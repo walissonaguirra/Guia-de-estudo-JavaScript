@@ -207,3 +207,40 @@ let _name = null
 let message = `Bem-vindo, ${name ? name : 'visitante'}`
 console.log(message) // Bem-vindo, visitante
 
+
+/**
+ * Promisse
+ */
+
+fetch('https://api.github.com/users/walissonaguirra')
+  .then(response => response.json())
+  .then(body => {
+    console.log(body)
+  })
+  // .then(response => {
+  //   response.json().then(body => {
+  //     console.log(body)
+  //   })
+  // })
+  .catch(err => {
+    console.log(err)
+  })
+  .finally(() => {
+    console.log('deu')
+  })
+
+
+async function buscaDadosNoGithub() {
+  try {
+    const response = await fetch('https://api.github.com/users/walissonaguirra')
+    const body = await response.json()
+
+    console.log(body)
+  } catch (err) {
+    console.log(err)
+  } finally {
+    console.log('deu')
+  }
+}
+
+buscaDadosNoGithub()
